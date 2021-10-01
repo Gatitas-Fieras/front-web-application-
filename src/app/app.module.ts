@@ -56,6 +56,7 @@ import {MatNativeDateModule} from "@angular/material/core";
 import { TutorsComponent } from './components/tutors/tutors.component';
 import { TutorComponent } from './components/tutor/tutor.component';
 import { MatPaginatorModule } from "@angular/material/paginator";
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
 
 
 
@@ -91,36 +92,37 @@ import { MatPaginatorModule } from "@angular/material/paginator";
     TutorComponent,
 
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatGridListModule,
-    MatButtonModule,
-    MatCardModule,
-    MatListModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatSidenavModule,
-    MatTabsModule,
-    MatProgressSpinnerModule,
-    MatDialogModule,
-    MatSnackBarModule,
-    MatChipsModule,
-    FlexLayoutModule,
-    MatInputModule,
-    MatFormFieldModule,
-    ReactiveFormsModule,
-    MatSelectModule,
-    MatCheckboxModule,
-    HttpClientModule,
-    MatTableModule,
-    NgPaymentCardModule,
-    FormsModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatPaginatorModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatGridListModule,
+        MatButtonModule,
+        MatCardModule,
+        MatListModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatSidenavModule,
+        MatTabsModule,
+        MatProgressSpinnerModule,
+        MatDialogModule,
+        MatSnackBarModule,
+        MatChipsModule,
+        FlexLayoutModule,
+        MatInputModule,
+        MatFormFieldModule,
+        ReactiveFormsModule,
+        MatSelectModule,
+        MatCheckboxModule,
+        HttpClientModule,
+        MatTableModule,
+        NgPaymentCardModule,
+        FormsModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatPaginatorModule,
+        MatButtonToggleModule
+    ],
   providers: [MatDatepickerModule, MatNativeDateModule, UserApiService],
   bootstrap: [AppComponent],
 })

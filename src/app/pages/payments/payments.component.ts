@@ -10,7 +10,10 @@ import {Router} from "@angular/router";
 export class PaymentsComponent implements OnInit {
 
   price: number | undefined;
-
+  cardNumber: string | undefined;
+  cardHolder: string | undefined;
+  expirationMonth: string | undefined;
+  ccv: number | undefined;
   constructor(private shared: SharedsService) { }
 
   ngOnInit(): void {
