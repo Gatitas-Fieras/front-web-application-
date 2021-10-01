@@ -38,6 +38,10 @@ export class SessionComponent implements OnInit{
     this.getAllSessions()
   }
 
+  createSession(): void {
+    this.router.navigate(['main/create-session']);
+  }
+
 
   reserve(id: any){
     console.log(id);
