@@ -1,0 +1,22 @@
+.tiny-card {
+  max-width: 700px;
+}
+
+
+.back-color-web {
+  background-color: #2699fb;
+}
+
+.card-component{
+  padding: 1rem 1rem 0.5rem 0rem;
+}
+
+.container{
+  display:grid;
+  gap: 1rem;
+  grid-auto-flow: dense;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(auto-fit,minmax(15rem, 1fr));
+  justify-content:center;
+  align-items: center;
+}

@@ -1,0 +1,13 @@
+.tiny-card {
+  max-width: 300px;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 100vh;
+}
+.square {
+  min-height: 50%;
+}

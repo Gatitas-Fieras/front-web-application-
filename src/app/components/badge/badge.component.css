@@ -1,0 +1,24 @@
+.body{
+  max-width: 70%;
+}
+
+.p{
+  text-align: center;
+}
+.body{
+  justify-content: center;
+  align-items: center;
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://i.pinimg.com/originals/07/8a/2a/078a2abc64f7dc13fa56c1cc93c693a3.jpg');
+  background-size: cover;
+}
+.example-header-image2 {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg2JY9zYKaX2JK2LmRoddQ4LNZREOTtSG2Nw&usqp=CAU');
+  background-size: cover;
+}

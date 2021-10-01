@@ -1,0 +1,24 @@
+.fix-img {
+  max-width: 100%;
+  height: auto;
+}
+.font-title {
+  font-size: clamp(40px,5vw, 90px); 
+}
+.font-subtitle {
+  font-size: clamp(0.5em,2vw, 1.5em); 
+}
+.mb-4 {
+  margin-bottom: 4rem;
+}
+.mr-5 {
+  margin-right: 2rem;
+}
+.p-cent {
+  padding-right: 2rem;
+}
+
+.button-color {
+  background-color: #2699fb;
+  color: #ffffff;
+}

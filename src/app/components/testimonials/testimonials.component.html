@@ -1,0 +1,82 @@
+<div class="container">
+  <mat-grid-list cols="3" rowHeight="2.5:1">
+    <mat-grid-tile [colspan]="1" [rowspan]="2">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Testimonials</mat-card-title>
+          <mat-card-subtitle *ngIf="studentView">Real stories about our students</mat-card-subtitle>
+          <mat-card-subtitle *ngIf="tutorView">Real stories about our tutors</mat-card-subtitle>
+        </mat-card-header>
+        <img *ngIf="studentView" mat-card-image src="https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Photo of student">
+        <img *ngIf="tutorView" mat-card-image src="https://images.pexels.com/photos/4491461/pexels-photo-4491461.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Photo of tutors">
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+      <mat-card>
+        <div *ngIf="studentView">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image" style="background-image: url('https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')"></div>
+            <mat-card-title>WEN ZHĀNG - CHINA</mat-card-title>
+            <mat-card-subtitle>User for more than 3 months</mat-card-subtitle>
+          </mat-card-header>
+          <div mat-card-image></div>
+          <mat-card-content style="max-width: 890px">
+            <p>
+              "I used to have trouble talking to my boss at work.
+              Thanks to <strong>ILanguage</strong>, I can finally communicate properly. I can finally communicate properly".
+            </p>
+          </mat-card-content>
+        </div>
+        <div *ngIf="tutorView">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image" style="background-image: url('https://cdn.vuetifyjs.com/images/john.png')"></div>
+            <mat-card-title>ADRIEN DUBOIS - FRANCE</mat-card-title>
+            <mat-card-subtitle>User for more than 3 months</mat-card-subtitle>
+          </mat-card-header>
+          <div mat-card-image></div>
+          <mat-card-content style="max-width: 890px">
+            <p>
+              "I always wanted to be able to share my knowledge in botany. Now thanks to <strong>ILanguage</strong>.
+              I have achieved that and I can also get paid for it: it's great!".
+            </p>
+          </mat-card-content>
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+      <mat-card>
+        <div *ngIf="studentView">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image" style="background-image: url('https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')"></div>
+            <mat-card-title>JERRY JOHN - UNITED STATES</mat-card-title>
+            <mat-card-subtitle>User for more than 5 months</mat-card-subtitle>
+          </mat-card-header>
+          <div mat-card-image></div>
+          <mat-card-content style="max-width: 890px">
+            <p>
+              "I am a doctor and I have always wanted to
+              work in Spain, but I could not understand Spanish doctors. That is not a problem now thanks to <strong>ILanguage</strong>".
+            </p>
+          </mat-card-content>
+        </div>
+        <div *ngIf="tutorView">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image" style="background-image: url('https://cdn.vuetifyjs.com/images/lists/2.jpg')"></div>
+            <mat-card-title>KALÚ KUMAR - INDIA</mat-card-title>
+            <mat-card-subtitle>User for more than 1 year</mat-card-subtitle>
+          </mat-card-header>
+          <div mat-card-image></div>
+          <mat-card-content style="max-width: 890px">
+            <p>
+              "My passion is computers and I have been very successful in my country thanks to this.
+              That is why I have decided to help others so that they can also achieve it".
+            </p>
+          </mat-card-content>
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+
+
+  </mat-grid-list>
+
+</div>

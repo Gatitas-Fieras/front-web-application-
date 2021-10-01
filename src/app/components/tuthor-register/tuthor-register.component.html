@@ -1,0 +1,83 @@
+<div class="container">
+  <mat-card class="sign-up">
+    <mat-card-title>Sign Up Now</mat-card-title>
+    <mat-card-subtitle
+      >Sign up now for the ultimate learning experience</mat-card-subtitle
+    >
+    <mat-card-content>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Username</mat-label>
+        <input matInput />
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-content>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-content>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Enter your email</mat-label>
+        <input
+          matInput
+          placeholder="pat@example.com"
+          [formControl]="email"
+          required
+        />
+        <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-content>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Select language</mat-label>
+        <mat-select>
+          <mat-option value="one">English</mat-option>
+          <mat-option value="two">Spanish</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card-content>
+
+    <mat-card-content>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Select Topic</mat-label>
+        <mat-select>
+          <mat-option value="one">Space</mat-option>
+          <mat-option value="two">Math</mat-option>
+          <mat-option value="three">Cooking</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-content>
+      <mat-card-subtitle>Tell us about yourself</mat-card-subtitle>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Description</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-content>
+      <mat-checkbox color="primary">Accept <app-terms-conditions></app-terms-conditions></mat-checkbox>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-raised-button routerLink="/register/role">CANCEL</button>
+      <button
+        mat-raised-button
+        color="primary"
+        class="back-color-web"
+        routerLink="/main"
+      >
+        SIGN UP
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  padding: 5rem;
+  justify-content: center;
+}
+.back-color-web {
+  background-color: #2699fb;
+}
+.sign-up {
+  max-width: 500px;
+}
+.full-width {
+  width: 100%;
+}

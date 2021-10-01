@@ -1,0 +1,15 @@
+.mat-tab-group {
+  margin-bottom: 48px;
+}
+
+.spoken-card {
+  max-width: 400px;
+  /*margin-left: 35%;*/
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}

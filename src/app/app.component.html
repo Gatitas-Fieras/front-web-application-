@@ -1,0 +1,37 @@
+<div>
+<mat-toolbar color="primary" class="mat-elevation-z4">
+  <div fxShow="true" fxHide.gt-sm="true">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+
+
+  <span  routerLink="/home"> ILanguage</span>
+  <div class="spacer"></div>
+  <div fxShow="true" fxHide.lt-md="true">
+    <a mat-button  routerLink="/">Home</a>
+    <a mat-button  routerLink="/register">Register</a>
+    <a mat-button  routerLink="/login">Login</a>
+
+  </div>
+</mat-toolbar>
+<mat-sidenav-container fxFlexFill class="example-container"  >
+
+  <mat-sidenav  color="primary" #sidenav fxLayout="column" mode="over"  opened="false" fxHide.gt-sm="false" style="width:10%" fxLayoutAlign="end center">
+    <div fxLayout="column" >
+
+      <a mat-button  routerLink="/">Home</a>
+      <a mat-button routerLink="/register">Register</a>
+      <a mat-button  routerLink="/login">Login</a>
+      <a mat-button  routerLink="/main/profile">Profile</a>
+      <a mat-button  routerLink="/main">Main</a>
+      <a mat-button  routerLink="/main/create-session">New Session</a>
+
+    </div>
+  </mat-sidenav>
+
+  <router-outlet></router-outlet>
+</mat-sidenav-container>
+
+</div>

@@ -1,0 +1,15 @@
+<app-banner></app-banner>
+<app-more-spoken></app-more-spoken>
+<app-badge class="badge"></app-badge>
+<app-testimonials [studentView]="true"></app-testimonials>
+<mat-grid-list cols="2" rowHeight="2:1.5">
+  <mat-grid-tile>
+    <app-ranking-student class="ranking"></app-ranking-student>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <app-feedback class="feedback"></app-feedback>
+  </mat-grid-tile>
+</mat-grid-list>
+<app-testimonials [tutorView]="true"></app-testimonials>
+<app-call-to-register></app-call-to-register>
+<app-footer></app-footer>

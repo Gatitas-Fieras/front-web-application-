@@ -1,0 +1,32 @@
+<div class="container">
+
+    <mat-card class="tiny-card size" *ngFor="let subscription of subscriptions">
+      <mat-card-title>{{subscription.name}}</mat-card-title>
+      <mat-card-content>
+        <ul>
+          <li>Cancel at any time</li>
+          <li>We accept as payment method all your credit cards.</li>
+          <li>No commissions or late payments</li>
+          <li>Practice from your cell phone or computer</li>
+        </ul>
+      </mat-card-content>
+      <mat-divider></mat-divider>
+      <div class="card-component">
+        <mat-chip-list>
+          <mat-chip>{{subscription.id}}</mat-chip>
+          <mat-chip selected color="primary" class="back-color-web"
+            >Before: {{subscription.price}} $</mat-chip
+          >
+        </mat-chip-list>
+      </div>
+      <mat-card-actions>
+        <button mat-raised-button (click)="goToPay(subscription.price)">SELECT</button>
+      </mat-card-actions>
+    </mat-card>
+</div>
+
+
+
+
+
+

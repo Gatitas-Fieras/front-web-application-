@@ -1,0 +1,77 @@
+<div class="container">
+  <mat-spinner class="spinner" diameter="50" *ngIf="loading"></mat-spinner>
+
+  <form [formGroup]="form" (ngSubmit)="createSession()"  >
+  <mat-card raisedElevation="16" class="z-depth" *ngIf="!loading" >
+    <mat-card-title>Create a new session</mat-card-title>
+    <mat-card-subtitle
+    >Give us some information about your new session</mat-card-subtitle
+    >
+    <mat-card-content>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Information</mat-label>
+        <input matInput type="text" formControlName="info" />
+      </mat-form-field>
+    </mat-card-content>
+
+
+    <mat-card-content>
+      <mat-form-field appearance="fill" >
+        <mat-label >Select Topic</mat-label>
+        <mat-select  name="topic" formControlName="topic" [disabled]="createNewSesion==true">
+          <mat-option *ngFor="let topic of topics" [value]="topic.name" >
+            {{topic.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card-content>
+
+    <mat-card-content *ngIf="createNewSesion">
+      <mat-form-field appearance="fill" class="full-width">
+      <mat-label>New Topic</mat-label>
+      <input matInput type="text" formControlName="newTopicName" />
+      </mat-form-field>
+    </mat-card-content>
+
+    <mat-card-content>
+      <mat-form-field>
+        <input matInput type="datetime-local" placeholder="start date"  formControlName="initialDate" >
+      </mat-form-field>
+    </mat-card-content>
+
+    <mat-card-content>
+      <mat-form-field>
+
+        <input matInput type="datetime-local" placeholder="end date" formControlName="endDate" >
+      </mat-form-field>
+    </mat-card-content>
+
+    <mat-card-content>
+      <mat-form-field appearance="fill">
+        <mat-label>Select Language</mat-label>
+        <mat-select  name="language" formControlName="language">
+          <mat-option *ngFor="let language of languages" [value]="language.name" >
+            {{language.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card-content>
+
+
+
+    <mat-card-actions>
+      <button mat-raised-button routerLink="/register/role">CANCEL</button>
+      <button
+        mat-raised-button
+        color="primary"
+        class="back-color-web"
+        type="submit"
+        [disabled]="form.invalid"
+      >
+        CREATE
+      </button>
+    </mat-card-actions>
+  </mat-card>
+  </form>
+</div>
+

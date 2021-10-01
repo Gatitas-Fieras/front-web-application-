@@ -1,0 +1,28 @@
+.footerTitle{
+  font-family: "monospace", fantasy;
+  text-align: center;
+
+}
+
+.footer{
+  height:20%;
+  background-color: #427ef1;
+  border-top-left-radius: 20px;
+  border-top-style: inherit;
+  border-top-right-radius: 20px;
+}
+
+.definition{
+  padding-left: 2%;
+  padding-right:2%;
+  color:white;
+}
+.btnTerms{
+  background-color: lemonchiffon;
+
+  max-width:15%;
+  min-width:15%;
+  margin-left:42.5%;
+  margin-right:41.5%;
+  display: inline-block;
+}

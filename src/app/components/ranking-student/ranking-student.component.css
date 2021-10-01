@@ -1,0 +1,55 @@
+.texto-ranking {
+  align-content: center;
+  text-align: center;
+}
+.barra-progreso {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  text-align: center;
+}
+.first-card {
+  background-color: #d4af37;
+}
+.second-card {
+  background-color: #c0c0c0;
+}
+.third-card {
+  background-color: #cd7f32;
+}
+.example-header-image {
+  background-image: url("https://cdn.vuetifyjs.com/images/john.jpg");
+  background-size: cover;
+}
+.example-header-image2 {
+  background-image: url("https://avatars0.githubusercontent.com/u/9064066?v=4&s=460");
+  background-size: cover;
+}
+.example-header-image3 {
+  background-image: url("https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: cover;
+}
+.medal-first-image {
+  background-image: url("../../../assets/img/first-place.png");
+  background-size: cover;
+}
+
+.medal-second-image {
+  background-image: url("../../../assets/img/second-place.png");
+  background-size: cover;
+}
+
+.medal-third-image {
+  background-image: url("../../../assets/img/third-place.png");
+  background-size: cover;
+}
+.container {
+  background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.shadow{
+  filter: drop-shadow(0 0 7px #333);
+  max-width: 3rem;
+}

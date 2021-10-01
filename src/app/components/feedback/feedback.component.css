@@ -1,0 +1,36 @@
+.total{
+  max-width: 50%;
+}
+.body{
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  align-items: center;
+}
+.icon{
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.texto-estrellas{
+  align-content: center;
+  text-align: center;
+}
+
+.barra-progreso{
+  display: flex;
+  align-content: center;
+  text-align: center;
+  margin: 0 50px;
+}
+.imagen{
+  max-width: 100%;
+  height: auto;
+  align-items: center;
+  text-align: center;
+}
+
+.texto{
+  text-align: center;
+}
