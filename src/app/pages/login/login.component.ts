@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {Router} from "@angular/router";
+import {SharedsService} from "../../shared/shareds.service";
 
 @Component({
   selector: 'app-login',
@@ -12,11 +13,12 @@ export class LoginComponent implements OnInit {
   form: FormGroup;
   loading: boolean = false;
 
-  constructor(private fb: FormBuilder, private _snackBar: MatSnackBar, private router: Router) {
+  constructor(private fb: FormBuilder, private _snackBar: MatSnackBar, private router: Router, private shared: SharedsService) {
     this.form = this.fb.group({
       usuario:['', Validators.required],
       password:['', Validators.required],
     })
+    shared.setUserType(0);
   }
 
   ngOnInit(): void {
@@ -28,6 +30,11 @@ export class LoginComponent implements OnInit {
 
     if(usuario == 'pepe' && password == '123'){
       //TODO:
+      this.shared.setUserType(1);
+      this.fakeLoading();
+    }
+    else if(usuario == 'roberto' && password == '123'){
+      this.shared.setUserType(2);
       this.fakeLoading();
     }
     else {

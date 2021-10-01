@@ -21,11 +21,11 @@ export class SharedsService {
   }
 
 
-  get userType(): number {
+  getUserType(): number {
     return this._userType;
   }
 
-  set userType(value: number) {
+   setUserType(value: number) {
     this._userType = value;
   }
 }
