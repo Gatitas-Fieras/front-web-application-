@@ -8,7 +8,7 @@ import { UserOutput } from "../models/outputs/userOutput";
 
 @Injectable({providedIn: 'root'})
 export class UserApiService {
-  basePath='https://ilanguage-318118.rj.r.appspot.com/api/user';
+  basePath='http://localhost:8090/api/user';
   httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json'})};
 
   constructor(private http: HttpClient) { }

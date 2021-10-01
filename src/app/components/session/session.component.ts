@@ -5,6 +5,7 @@ import {SessionApiService} from "../../core/services/session-api.service";
 import {OnInit} from "@angular/core";
 import {Router} from "@angular/router";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {SharedsService} from "../../shared/shareds.service";
 
 @Component({
   selector: 'app-session',
@@ -13,10 +14,12 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 })
 export class SessionComponent implements OnInit{
 
+  userType :  number;
   sessions : any[] = [];
 
-  constructor(public dialog: MatDialog, private sessionApi: SessionApiService, private router: Router, private _snackBar: MatSnackBar) {
-    this.sessions = []
+  constructor(public dialog: MatDialog, private sessionApi: SessionApiService, private router: Router, private _snackBar: MatSnackBar, private shared: SharedsService) {
+    this.sessions = [];
+    shared.getUserType()==1? this.userType = 1 : this.userType=2;
   }
   openDialog(){
     this.dialog.open(DialogSessionComponent);

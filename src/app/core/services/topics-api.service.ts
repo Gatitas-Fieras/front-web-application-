@@ -10,7 +10,7 @@ import {catchError, retry} from "rxjs/operators";
 })
 export class TopicsApiService {
 
-  basePath='https://ilanguage-318118.rj.r.appspot.com/api/topic';
+  basePath='http://localhost:8090/api/topic';
 
   constructor(private http: HttpClient) { }
 
