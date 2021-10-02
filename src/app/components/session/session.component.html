@@ -1,6 +1,9 @@
-<mat-drawer-container class="example-container" >
+<mat-drawer-container class="example-container">
   <mat-drawer mode="side" opened>
-    <img class="avatar mat-elevation-z8" src="../../../assets/img/chinese-girl.jpg"  />
+    <img
+      class="avatar mat-elevation-z8"
+      src="../../../assets/img/chinese-girl.jpg"
+    />
 
     <h4 class="name">WEN ZHĀNG</h4>
     <p class="designation">Software Engineer</p>
@@ -11,52 +14,51 @@
       <mat-icon>home</mat-icon>
       <span>Home</span>
     </button>
-    <button mat-button class="menu-button" routerLink="/main/profile" >
+    <button mat-button class="menu-button" routerLink="/main/profile">
       <mat-icon>person</mat-icon>
       <span>Profile</span>
     </button>
 
-    <button mat-button class="menu-button" routerLink="/tutors" >
+    <button mat-button class="menu-button" routerLink="/tutors">
       <mat-icon>info</mat-icon>
       <span>Search</span>
     </button>
   </mat-drawer>
- <mat-drawer-container></mat-drawer-container>
+  <mat-drawer-container></mat-drawer-container>
   <mat-drawer-content>
-
-
-
-<div class="container" *ngIf="userType==1">
-  <mat-card class="size" *ngFor="let sesion of sessions" >
-    <div *ngIf="sesion.state=='active'">
-    <mat-card-title>Session</mat-card-title>
-    <mat-chip-list class="spacer">
-      <mat-chip>{{sesion.startAt}}</mat-chip>
-      <mat-chip>{{sesion.endAt}}</mat-chip>
-    </mat-chip-list>
-    <mat-card-content>
-      {{sesion.information}}
-    </mat-card-content>
-    <mat-chip-list class="spacer">
-      <mat-chip>{{sesion.topic}}</mat-chip>
-      <mat-chip>{{sesion.state}}</mat-chip>
-    </mat-chip-list>
-    <mat-card-actions>
-      <button mat-raised-button>CANCEL</button>
-      <button (click)="reserve(sesion.id)" mat-raised-button color="primary">
-        ENTRY
-      </button>
-    </mat-card-actions>
+    <div class="container" *ngIf="userType == 1">
+      <mat-card class="size" *ngFor="let sesion of sessions">
+        <div *ngIf="sesion.state == 'active'">
+          <mat-card-title>Session</mat-card-title>
+          <mat-chip-list class="spacer">
+            <mat-chip>{{ sesion.startAt }}</mat-chip>
+            <mat-chip>{{ sesion.endAt }}</mat-chip>
+          </mat-chip-list>
+          <mat-card-content>
+            {{ sesion.information }}
+          </mat-card-content>
+          <mat-chip-list class="spacer">
+            <mat-chip>{{ sesion.topic }}</mat-chip>
+            <mat-chip>{{ sesion.state }}</mat-chip>
+          </mat-chip-list>
+          <mat-card-actions>
+            <button mat-raised-button>CANCEL</button>
+            <button
+              (click)="reserve(sesion.id)"
+              mat-raised-button
+              color="primary"
+            >
+              ENTRY
+            </button>
+          </mat-card-actions>
+        </div>
+      </mat-card>
     </div>
-  </mat-card>
-</div>
 
-    <mat-button-toggle *ngIf="userType==2" (click)="createSession()">
-      Create session
-    </mat-button-toggle>
-
-
-
-
+    <mat-card class="crd-createsession">
+      <mat-button-toggle class="btncreatesession" *ngIf="userType == 2" (click)="createSession()">
+        Create session
+      </mat-button-toggle>
+    </mat-card>
   </mat-drawer-content>
 </mat-drawer-container>

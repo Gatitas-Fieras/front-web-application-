@@ -66,3 +66,17 @@ mat-divider {
   margin-bottom: 16px;
   background-color: rgba(255, 255, 255, 0.5);
 }
+
+.crd-createsession{
+  background-color: rgba(0, 0, 0, 0.788);
+  margin: 20rem;
+}
+
+.btncreatesession{
+
+  margin: 25rem;
+  background-color: #030303;
+  color: white;
+  border-color: antiquewhite;
+
+}
