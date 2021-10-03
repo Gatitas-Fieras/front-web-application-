@@ -12,6 +12,9 @@ export class ProfileComponent implements OnInit {
 
   description: string | undefined;
   user :UserOutput | undefined;
+  editProfile: boolean | undefined;
+  editBtn: string | undefined;
+  profileEdited: boolean | undefined;
 
   constructor(private shared: SharedsService, private userApi : UserApiService) {
 
@@ -24,10 +27,23 @@ export class ProfileComponent implements OnInit {
         this.description = this.user?.description;
         console.log(this.user);
       })
+      this.editProfile = false;
    }
 
   ngOnInit(): void {
     this.getUserById();
+    this.editBtn = "Edit Profile";
+    this.profileEdited = false;
+  }
+
+  makeEditPorfileTrue(): void {
+    this.editProfile = true;
+    this.editBtn = "Save"
+    if(this.editBtn == "Save" && this.description != undefined) {
+      console.log(this.description);
+      this.editBtn="Edit Profile";
+      this.editProfile = false;
+    }
 
   }
 

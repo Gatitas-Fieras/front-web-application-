@@ -36,6 +36,12 @@
         <p>
          {{description}}
         </p>
+        <mat-card-actions>
+          <mat-button-toggle (click)="makeEditPorfileTrue()">{{editBtn}}</mat-button-toggle>
+          <br>
+          <br>
+          <input *ngIf="editProfile==true" [(ngModel)]="description">
+        </mat-card-actions>
       </mat-card-content>
       <mat-chip-list>
         Languages:
