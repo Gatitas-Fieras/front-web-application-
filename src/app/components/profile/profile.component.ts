@@ -21,12 +21,14 @@ export class ProfileComponent implements OnInit {
    getUserById(): void {
       this.userApi.getUserById(this.shared.getId()).subscribe((response: any) => {
         this.user = response.content;
+        this.description = this.user?.description;
+        console.log(this.user);
       })
    }
 
   ngOnInit(): void {
     this.getUserById();
-    this.description = this.user?.description;
+
   }
 
 }

@@ -11,7 +11,7 @@ export class SharedsService {
   constructor() {
     this.price = 0;
     this._userType = 0;
-    this.id =0;
+    this.id =1;
   }
 
   setId(id: number){
