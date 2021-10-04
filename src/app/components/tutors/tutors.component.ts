@@ -46,12 +46,12 @@ export class TutorsComponent implements OnInit, AfterViewInit {
 
   getAllTutors(): void {
     this.userApi.getAllUsers().subscribe((response: any) => {
-      this.dataSource.data = response;
+      this.dataSource.data = response.content;
     });
   }
 
   navigateToTutor(userId: number): void {
-    this.router.navigate([`/users/${userId}`])
+    this.router.navigate([`./users/${userId}`])
       .then(() => console.log('Navigated to Tutor'));
   }
 

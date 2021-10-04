@@ -36,20 +36,20 @@
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
       <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef> Name </th>
-        <td mat-cell *matCellDef="let element"> {{ element.name }}</td>
+        <td mat-cell *matCellDef="let element"> {{ element.name }} </td>
       </ng-container>
       <ng-container matColumnDef="topics">
         <th mat-header-cell *matHeaderCellDef> Topics </th>
-        <td mat-cell *matCellDef="let element"> {{ element.topics }}</td>
+        <td mat-cell *matCellDef="let element"> {{ element.topics.name }} </td>
       </ng-container>
       <ng-container matColumnDef="languages">
         <th mat-header-cell *matHeaderCellDef> Languages </th>
-        <td mat-cell *matCellDef="let element"> {{ element.languages }}</td>
+        <td mat-cell *matCellDef="let element"> {{ element.languages.name }} </td>
       </ng-container>
       <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef> Actions </th>
         <td mat-cell *matCellDef="let element">
-          <a href="javascript:void(0)"  (click)="navigateToTutor(element.id)"><mat-icon inline aria-hidden="false" aria-label="Edit" style="padding-right: 10px;">details</mat-icon></a>
+          <a href="javascript:void(0)" (click)="navigateToTutor(element.id)"><mat-icon inline aria-hidden="false" aria-label="Edit" style="padding-right: 10px;">Ver más</mat-icon></a>
         </td>
       </ng-container>
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
