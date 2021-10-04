@@ -32,7 +32,11 @@ import { TestimonialsComponent } from './components/testimonials/testimonials.co
 import { FooterComponent } from './components/footer/footer.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { DialogComponent } from './components/dialog/dialog.component';
-import { ProfileComponent } from './components/profile/profile.component';
+import {
+  CancelSubscriptionComponent,
+  cancelSubscriptionDialog,
+  ProfileComponent
+} from './components/profile/profile.component';
 import { BadgeComponent } from './components/badge/badge.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -57,6 +61,7 @@ import { TutorsComponent } from './components/tutors/tutors.component';
 import { TutorComponent } from './components/tutor/tutor.component';
 import { MatPaginatorModule } from "@angular/material/paginator";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
+import { CancelDialogComponent } from './components/cancel-dialog/cancel-dialog.component';
 
 
 
@@ -90,6 +95,7 @@ import {MatButtonToggleModule} from "@angular/material/button-toggle";
     CreateSessionComponent,
     TutorsComponent,
     TutorComponent,
+    CancelDialogComponent
 
   ],
     imports: [
