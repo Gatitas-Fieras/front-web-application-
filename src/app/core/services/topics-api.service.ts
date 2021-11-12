@@ -10,7 +10,9 @@ import {catchError, retry} from "rxjs/operators";
 })
 export class TopicsApiService {
 
-  basePath='http://localhost:8090/api/topic';
+  //basePath='http://localhost:8090/api/';
+  basePath='https://ilnguae.azurewebsites.net/api/topic';
+
 
   constructor(private http: HttpClient) { }
 

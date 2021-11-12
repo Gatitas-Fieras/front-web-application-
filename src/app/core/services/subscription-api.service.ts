@@ -8,7 +8,9 @@ import { catchError, retry } from "rxjs/operators";
 @Injectable({ providedIn: 'root' })
 export class SubscriptionApiService{
   //basePath = 'https://60c2e09f917002001739da47.mockapi.io/subscription';
-  basePath='http://localhost:8090/api/subscriptions';
+ // basePath='http://localhost:8090/api/';
+  basePath='https://ilnguae.azurewebsites.net/api/subscriptions';
+
 
   constructor(private http: HttpClient) { }
 

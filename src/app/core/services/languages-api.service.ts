@@ -9,8 +9,8 @@ import {catchError, retry} from "rxjs/operators";
 })
 export class LanguagesApiService {
 
-  basePath='http://localhost:8090/api/languages';
-
+  //basePath='http://localhost:8090/api/';
+  basePath='https://ilnguae.azurewebsites.net/api/languages';
   constructor(private http: HttpClient) { }
 
   httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json'})};

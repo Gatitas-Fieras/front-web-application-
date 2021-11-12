@@ -11,7 +11,8 @@ import{SessionInput} from "../models/inputs/session-input";
 })
 export class SessionApiService {
 
-  basePath='http://localhost:8090/api/sessions';
+  ///basePath='http://localhost:8090/api/';
+  basePath='https://ilnguae.azurewebsites.net/api/sessions';
 
   constructor(private http: HttpClient) { }
 
